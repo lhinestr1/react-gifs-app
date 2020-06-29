@@ -4,7 +4,19 @@
     padding: 0px;
 }
 
+.title-app{
+    font-family: 'MuseoModerno', cursive;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+
 #list{
-    max-height: 500px;
-    overflow-y: auto;
+    margin-top: 140px;
 }

@@ -32,13 +32,15 @@ function App() {
 
   return (
     <div>
-      <h1 className='p-2 text-center'>Buscador de Gift</h1>
-      <GripForm handlerCategory={handlerCategory} add_category={add_category}></GripForm>
-      {
-        categorys.length === 0 
-        ? <div class="alert alert-warning" role="alert">Agregue una categoria</div> 
-        : ""
-      }
+      <div className='header'>
+        <h1 className='p-2 text-center title-app'>Buscador de Gift</h1>
+        <GripForm handlerCategory={handlerCategory} add_category={add_category}></GripForm>
+        {
+          categorys.length === 0 
+          ? <div class="alert alert-warning" role="alert">Agregue una categoria</div> 
+          : ""
+        }
+      </div>
       <div id='list' className='pt-2'>
         {
           categorys.map( value => <GripList key={value} category={value}></GripList> )
