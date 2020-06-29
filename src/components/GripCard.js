@@ -22,9 +22,9 @@ const GripCard = ({ title, img }) => {
     return (
         <div className="card">
             <img className="card-img-top" src={img} alt={title} />
-            <div className="card-body">
+            <div className="card-body p-3">
                 <h5 className="card-title mb-0">
-                    <button className='btn btn-outline-primary' onClick={() => copy_url(img)} >Copiar al portapepeles</button>
+                    <button className='btn btn-outline-primary' onClick={() => copy_url(img)} >Copiar al portapapeles</button>
                 </h5>
             </div>
         </div>

@@ -13,9 +13,15 @@ function App() {
     return s.charAt(0).toUpperCase() + s.slice(1)
   }
 
+  const scrollTop = () => {
+    document.querySelector("#list").scrollTop = 0;
+  }
+
 
   const handlerCategory = (e) => {
     e.preventDefault();
+
+    scrollTop()
 
     const name = add_category.current.value
     const nameCapitalized = capitalize(name)
@@ -33,9 +39,11 @@ function App() {
         ? <div class="alert alert-warning" role="alert">Agregue una categoria</div> 
         : ""
       }
-      {
-        categorys.map( value => <GripList key={value} category={value}></GripList> )
-      }
+      <div id='list' className='pt-2'>
+        {
+          categorys.map( value => <GripList key={value} category={value}></GripList> )
+        }
+      </div>
     </div>
   );
 }
