@@ -8,10 +8,19 @@ function App() {
   const [categorys, setCategorys] = useState([])
   const add_category = useRef("")
 
+  const capitalize = (s) => {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
+
 
   const handlerCategory = (e) => {
     e.preventDefault();
-    setCategorys( (prevent) => [add_category.current.value,...prevent]  )
+
+    const name = add_category.current.value
+    const nameCapitalized = capitalize(name)
+
+    setCategorys( (prevent) => [nameCapitalized,...prevent]  )
     add_category.current.value = "";
   }
 
