@@ -23,7 +23,7 @@ const GripList = ({category}) => {
                 })
             }
             {
-                data_gifs.data.length === 0 ? <p>No se encontraron registros</p> : "" 
+                data_gifs.data.length === 0 && !data_gifs.isLoading ? <p>No se encontraron registros</p> : "" 
             }
             </div>
         </div>
